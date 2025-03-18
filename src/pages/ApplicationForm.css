@@ -1,0 +1,77 @@
+.application-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.application-form-container h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.application-form .form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.application-form .form-row .form-group {
+  flex: 1;
+}
+
+.application-form .form-group {
+  margin-bottom: 20px;
+}
+
+.application-form .form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.application-form .form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.application-form .form-control:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.application-form textarea.form-control {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.application-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.application-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .application-form .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

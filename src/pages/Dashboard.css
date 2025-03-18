@@ -1,0 +1,158 @@
+.dashboard {
+  padding: 20px 0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #3498db;
+}
+
+.stat-card p {
+  margin: 10px 0 0;
+  font-weight: 500;
+  color: #7f8c8d;
+}
+
+.stat-card.applied h2 { color: #3498db; }
+.stat-card.interview h2 { color: #9b59b6; }
+.stat-card.offer h2 { color: #2ecc71; }
+.stat-card.rejected h2 { color: #e74c3c; }
+
+.dashboard-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.view-all {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.recent-applications table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recent-applications th,
+.recent-applications td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.recent-applications th {
+  font-weight: 600;
+  color: #34495e;
+  border-bottom: 2px solid #ddd;
+}
+
+.recent-applications tr:hover {
+  background-color: #f9f9f9;
+}
+
+.recent-applications a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.empty-message {
+  padding: 30px;
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.empty-message p {
+  margin-bottom: 20px;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.resource-card {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.resource-card p {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .dashboard-header a {
+    margin-top: 15px;
+  }
+  
+  .stats-cards {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
