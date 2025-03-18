@@ -33,10 +33,20 @@ export const getApplicationById = async (id: number): Promise<JobApplication | n
 };
 
 // Create a new job application
-export const createApplication = async (application: Omit<JobApplication, 'id' | 'last_updated'>): Promise<JobApplication> => {
+export const createApplication = async (application: Omit<JobApplication, 'id' | 'last_updated' | 'user_id'>): Promise<JobApplication> => {
+  const { data: { user } } = await supabase.auth.getUser();
+  
+  if (!user) {
+    throw new Error('User must be logged in to create an application');
+  }
+  
   const { data, error } = await supabase
     .from('job_applications')
-    .insert([{ ...application, last_updated: new Date().toISOString() }])
+    .insert([{ 
+      ...application, 
+      user_id: user.id,
+      last_updated: new Date().toISOString() 
+    }])
     .select()
     .single();
     

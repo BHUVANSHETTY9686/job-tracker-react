@@ -1,0 +1,14 @@
+.login-page {
+  min-height: 100vh;
+  background-color: #f5f7fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
